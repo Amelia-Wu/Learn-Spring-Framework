@@ -14,6 +14,9 @@ public class App02GamingBasicJava {
 		// 2. Configuration for Spring
 		// 3. Retrieve the Beans
 		System.out.println(context.getBean("name"));
+		System.out.println(context.getBean("age"));
+		System.out.println(context.getBean("person"));
+		System.out.println(context.getBean("address"));
 	}
 
 }
