@@ -5,6 +5,8 @@ import com.AW.SpringbootProject.game.SuperContraGame;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import java.util.Arrays;
+
 @SpringBootApplication
 public class App02GamingBasicJava {
 
@@ -19,6 +21,11 @@ public class App02GamingBasicJava {
 		System.out.println(context.getBean("person2"));
 		System.out.println(context.getBean("person3"));
 		System.out.println(context.getBean("address"));
+
+		System.out.println(context.getBean(Address.class));
+		System.out.println(context.getBean(Person.class));
+
+		Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
 	}
 
 }
