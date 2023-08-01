@@ -1,14 +1,12 @@
-package com.AW.SpringbootProject;
+package com.AW.SpringbootProject.helloworld;
 
-import com.AW.SpringbootProject.game.GameRunner;
-import com.AW.SpringbootProject.game.SuperContraGame;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.util.Arrays;
 
 @SpringBootApplication
-public class App02GamingBasicJava {
+public class App02HelloWorldJava {
 
 	public static void main(String[] args) {
 		// 1. Launch a Spring Context
