@@ -2,15 +2,15 @@ package com.AW.SpringbootProject;
 
 import com.AW.SpringbootProject.game.GameRunner;
 import com.AW.SpringbootProject.game.GamingConsole;
-import com.AW.SpringbootProject.game.SuperContraGame;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
-@SpringBootApplication
-public class App03GamingSpringBeans {
-
+@Configuration
+@ComponentScan("com.AW.SpringbootProject.game")
+public class GamingAppLauncher {
 	public static void main(String[] args) {
-		var context = new AnnotationConfigApplicationContext(GamingConfiguration.class);
+		var context = new AnnotationConfigApplicationContext(GamingAppLauncher.class);
 		context.getBean(GamingConsole.class).up();
 		context.getBean(GameRunner.class).run();
 	}
